@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Form With Validation</title>
+        <link rel="stylesheet" href="basic.css">
+        <style>
+            .error {color: red;}
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="basicfor.php" method="POST" enctype="multipart/form-data">
+                <center><u>Basic Form</u></center>
+                <fieldset>
+                <legend>Basic Information</legend>
+                <label for="fname">Full Names:</label>
+                <input type="text" name="fname" placeholder="Enter Full Names" required> <br><br>
+                
+                <label for="email">Email:</label>
+                <input type="text" name="email" placeholder="Enter your Email" required> <br><br>
+                
+                <label for="age">Age:</label>
+                <input type="number" name="age" required> <br><br>
+              
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender">Female
+                <input type="radio" name="gender" id="gender">Others <br><br>
+                
+                <label for="profile">Profile picture:</label><br><br>
+                <input type="file" name="profile"  size="2mb" id="profile" required> <br><br>
+               
+                <input type="submit" name="submit" placeholder="Submit">
+            </fieldset>
+            </form>
+        </div>
+       </body>
+</html>

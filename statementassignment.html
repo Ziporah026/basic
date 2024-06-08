@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditional and Loop Statements</title>
+    <script type="text/javascript">
+        // Task 1: if Statement - Check if a number is positive
+        function checkIfPositive() {
+            let number = prompt("Enter a number:");
+            number = Number(number);
+            if (number > 0) {
+                alert("The number is positive.");
+            } else {
+                alert("The number is not positive.");
+            }
+        }
+
+        // Task 2: if-else Statement - Check if a number is even or odd
+        function checkEvenOrOdd() {
+            let number = prompt("Enter a number:");
+            number = Number(number);
+            if (number % 2 === 0) {
+                alert("The number is even.");
+            } else {
+                alert("The number is odd.");
+            }
+        }
+
+        // Task 3: else if Statement - Grade students based on marks
+        function gradeStudent() {
+            let marks = prompt("Enter your marks (0-100):");
+            marks = Number(marks);
+            let grade;
+            if (marks >= 90) {
+                grade = 'A';
+            } else if (marks >= 80) {
+                grade = 'B';
+            } else if (marks >= 70) {
+                grade = 'C';
+            } else if (marks >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            alert("Your grade is: " + grade);
+        }
+
+        // Task 4: switch Statement - Print the name of the day based on the day number
+        function printDayOfWeek() {
+            let dayNumber = prompt("Enter a number between 1 and 7:");
+            dayNumber = Number(dayNumber);
+            let day;
+            switch(dayNumber) {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+                    break;
+                default:
+                    day = "Invalid day number!";
+            }
+            alert(day);
+        }
+
+        // Task 5: for Loop - Print the first 10 natural numbers
+        function printFirst10NaturalNumbers() {
+            let numbers = "";
+            for (let i = 1; i <= 10; i++) {
+                numbers += i + " ";
+            }
+            alert("First 10 natural numbers: " + numbers);
+        }
+
+        // Task 6: do Loop - Prompt until number is greater than 100
+        function promptUntilGreaterThan100() {
+            let number;
+            do {
+                number = prompt("Enter a number greater than 100:");
+                number = Number(number);
+            } while (number <= 100);
+            alert("Thank you! You entered a number greater than 100: " + number);
+        }
+
+        // Task 7: do-while Loop - Print numbers from 1 to 5
+        function printNumbersFrom1To5() {
+            let i = 1;
+            let numbers = "";
+            do {
+                numbers += i + " ";
+                i++;
+            } while (i <= 5);
+            alert("Numbers from 1 to 5: " + numbers);
+        }
+
+        // Task 8: break and continue Statements
+        function printNumbersWithConditions() {
+            let numbers = "";
+            for (let i = 1; i <= 10; i++) {
+                if (i === 7) {
+                    break;
+                }
+                if (i % 3 === 0) {
+                    continue;
+                }
+                numbers += i + " ";
+            }
+            alert("Numbers from 1 to 10 (skipping multiples of 3, stopping at 7): " + numbers);
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Conditional and Loop Statements Assignment</h1>
+    <button onclick="checkIfPositive()">Task 1: Check if Positive</button>
+    <br><br>
+    <button onclick="checkEvenOrOdd()">Task 2: Check Even or Odd</button>
+    <br><br>
+    <button onclick="gradeStudent()">Task 3: Grade Student</button>
+    <br><br>
+    <button onclick="printDayOfWeek()">Task 4: Print Day of Week</button>
+    <br><br>
+    <button onclick="printFirst10NaturalNumbers()">Task 5: Print First 10 Natural Numbers</button>
+    <br><br>
+    <button onclick="promptUntilGreaterThan100()">Task 6: Prompt Until > 100</button>
+    <br><br>
+    <button onclick="printNumbersFrom1To5()">Task 7: Print Numbers from 1 to 5</button>
+    <br><br>
+    <button onclick="printNumbersWithConditions()">Task 8: Break and Continue</button>
+</body>
+</html>
